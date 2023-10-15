@@ -1,21 +1,24 @@
-[tool.black]
-line-length = 79
-#include = '\.pyi?$'
-exclude = '''
-/(
-    \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''
+[tool.poetry]
+name = "anylabeling"
+version = "0.1.0"
+description = ""
+authors = ["arichadda <ari.chadda@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-contrib-python-headless = "4.7.0.72"
+PyQt5 = "5.15.7"
+imgviz = "1.5.0"
+natsort = "8.1.0"
+termcolor = "1.1.0"
+PyYAML = "6.0"
+onnx = "1.13.1"
+onnxruntime-gpu = "1.14.1"
+qimage2ndarray = "1.10.0"
+darkdetect = "0.8.0"
+
+[tool.poetry.dev-dependencies]
 
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
